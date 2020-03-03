@@ -12,27 +12,28 @@ project 1 - A Random Quote Generator
 ***/
 var quotes = [
   {
-    quote: "one small step for man, one giant leap for mankind!",
+    quote: "One small step for man, one giant leap for mankind!",
     Author: "Neal Armstrong",
-    Year: "July 20, 1969"
+    Year: "July 20, 1969",
+    Citation: "Moon Landing"
   },
   {
     quote: "I find your lack of faith disturbing!",
     Author: "Darth Vader",
-    Year: "July 20, 1969",
-    Citation: "Movie"
+    Year: "May 25, 1977",
+    Citation: "Star Wars: A New Hope"
   },
   {
     quote: "Fear is the path to the dark side. Fear leads to anger. Anger leads to hate. Hate leads to suffering",
     Author: "Master Yoda",
-    Year: "July 20, 1969",
-    Citation: "Movie"
+    Year: "May 19, 2005",
+    Citation: "Star Wars: Revenge of the Sith"
   },
   {
     quote: "Adventure. Excitement. A Jedi craves not these things.",
     Author: "Master Yoda",
-    Year: "July 20, 1969",
-    Citation: "Movie"
+    Year: "May 21, 1980",
+    Citation: "Star Wars: Empire Strikes Back"
   }
 ]
 
@@ -45,7 +46,7 @@ var quotes = [
 
 function getRandomQuote(){
   var randomNumber = (Math.floor(Math.random()*quotes.length));
-  console.log(quotes[randomNumber]);
+  console.log(quotes[randomNumber].quote);
 
   // console.log((Math.floor(Math.random()*quotes.length)));
   // if (previousQuote = randomNumber){
