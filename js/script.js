@@ -46,17 +46,15 @@ var quotes = [
 
 function getRandomQuote(){
   var randomNumber = (Math.floor(Math.random()*quotes.length));
-  console.log(quotes[randomNumber].quote);
+  // console.log(quotes[randomNumber].quote)
+  // console.log(quotes[randomNumber].Author)
+  // console.log(quotes[randomNumber].Year)
+  // console.log(quotes[randomNumber].Citation)
+  document.getElementById("quote-box").innerHTML=quotes[randomNumber].quote;
+  // console.log(document.getElementsByClassName("source"))=quotes[randomNumber].Author;
 
-  // console.log((Math.floor(Math.random()*quotes.length)));
-  // if (previousQuote = randomNumber){
-  //   var randomNumber = (Math.floor(Math.random()*quotes.length)
-  //   console.log(quotes[randomNumber])
-  // } else {
-  //   console.log(quotes[randomNumber]);
-  // }
+
 }
-
 
 /***
  * `printQuote` function
