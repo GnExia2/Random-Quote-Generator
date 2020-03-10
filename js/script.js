@@ -80,6 +80,7 @@ function printQuote(){
   }
   htmlToPage += '</p>';
   document.getElementById('quote-box').innerHTML = htmlToPage;
+  console.log("hi");
 }
 /***
  * click event listener for the print quote button
