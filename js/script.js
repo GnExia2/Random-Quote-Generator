@@ -34,6 +34,12 @@ var quotes = [
     Author: "Master Yoda",
     year: "May 21, 1980",
     category: "Star Wars: Empire Strikes Back"
+  },
+  {
+    quote: "Get busy living or get busy dying.",
+    Author: "Stephen King",
+    year: "September 22, 1994",
+    category: "The Shawshank Redemption"
   }
 ]
 
@@ -62,7 +68,6 @@ function printQuote(){
   }
   htmlToPage += '</p>';
   document.getElementById('quote-box').innerHTML = htmlToPage;
-  console.log("hi");
 }
 /***
  * click event listener for the print quote button
