@@ -38,24 +38,6 @@ var quotes = [
 ]
 
 
-/***
- * `getRandomQuote` function
-***/
-//   var previousQuote=0
-//
-//
-// function getRandomQuote(){
-//   var randomNumber = (Math.floor(Math.random()*quotes.length));
-//   // console.log(quotes[randomNumber].quote)
-//   // console.log(quotes[randomNumber].Author)
-//   // console.log(quotes[randomNumber].Year)
-//   // console.log(quotes[randomNumber].Citation)
-//   // document.getElementBsyId("quote-box").innerHTML=quotes[randomNumber].quote;
-//   var x = document.getElementById("quote-box");
-//   x.getElementsByClassName("source").innerHTML = "hi";
-//   console.log("this has been changed");
-//
-// }
 
 //This function grabs a random quote from the Quotes array.
 
