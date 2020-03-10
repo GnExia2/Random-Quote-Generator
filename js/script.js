@@ -14,26 +14,26 @@ var quotes = [
   {
     quote: "One small step for man, one giant leap for mankind!",
     Author: "Neal Armstrong",
-    Year: "July 20, 1969",
-    Citation: "Moon Landing"
+    year: "July 20, 1969",
+    category: "Moon Landing"
   },
   {
     quote: "I find your lack of faith disturbing!",
     Author: "Darth Vader",
-    Year: "May 25, 1977",
-    Citation: "Star Wars: A New Hope"
+    year: "May 25, 1977",
+    category: "Star Wars: A New Hope"
   },
   {
     quote: "Fear is the path to the dark side. Fear leads to anger. Anger leads to hate. Hate leads to suffering",
     Author: "Master Yoda",
-    Year: "May 19, 2005",
-    Citation: "Star Wars: Revenge of the Sith"
+    year: "May 19, 2005",
+    category: "Star Wars: Revenge of the Sith"
   },
   {
     quote: "Adventure. Excitement. A Jedi craves not these things.",
     Author: "Master Yoda",
-    Year: "May 21, 1980",
-    Citation: "Star Wars: Empire Strikes Back"
+    year: "May 21, 1980",
+    category: "Star Wars: Empire Strikes Back"
   }
 ]
 
@@ -41,28 +41,46 @@ var quotes = [
 /***
  * `getRandomQuote` function
 ***/
-  var previousQuote=0
+//   var previousQuote=0
+//
+//
+// function getRandomQuote(){
+//   var randomNumber = (Math.floor(Math.random()*quotes.length));
+//   // console.log(quotes[randomNumber].quote)
+//   // console.log(quotes[randomNumber].Author)
+//   // console.log(quotes[randomNumber].Year)
+//   // console.log(quotes[randomNumber].Citation)
+//   // document.getElementBsyId("quote-box").innerHTML=quotes[randomNumber].quote;
+//   var x = document.getElementById("quote-box");
+//   x.getElementsByClassName("source").innerHTML = "hi";
+//   console.log("this has been changed");
+//
+// }
 
+//This function grabs a random quote from the Quotes array.
 
-function getRandomQuote(){
-  var randomNumber = (Math.floor(Math.random()*quotes.length));
-  // console.log(quotes[randomNumber].quote)
-  // console.log(quotes[randomNumber].Author)
-  // console.log(quotes[randomNumber].Year)
-  // console.log(quotes[randomNumber].Citation)
-  document.getElementById("quote-box").innerHTML=quotes[randomNumber].quote;
-  // console.log(document.getElementsByClassName("source"))=quotes[randomNumber].Author;
+  function getRandomQuote(){
+    var randomNumber = Math.floor(Math.random()* quotes.length);
+     return quotes[randomNumber];
+    }
 
-
-}
 
 /***
  * `printQuote` function
 ***/
 function printQuote(){
-  getRandomQuote()
+  randomQuote = getRandomQuote(quotes);
+  htmlToPage = '<p class="quote">' + randomQuote.quote +'</p>';
+  htmlToPage +='<p class="Author">' + randomQuote.Author;
+  if(randomQuote.year){
+    htmlToPage += '<span class="year">' + randomQuote.year + '</span>';
+  }
+  if(randomQuote.category){
+    htmlToPage += '<span class="category">' +  " " + randomQuote.category + '</p>';
+  }
+  htmlToPage += '</p>';
+  document.getElementById('quote-box').innerHTML = htmlToPage;
 }
-
 /***
  * click event listener for the print quote button
  * DO NOT CHANGE THE CODE BELOW!!
