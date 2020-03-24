@@ -53,6 +53,16 @@ var quotes = [
     }
 
 
+//This function grabs a random color.
+
+  function randomColor() {
+    var randomColor = '#'+Math.floor(Math.random()*16777215).toString(16);
+    console.log(randomColor);
+    return randomColor
+  }
+
+const body = document.getElementById('body')
+
 /***
  * `printQuote` function
 ***/
@@ -68,7 +78,8 @@ function printQuote(){
   }
   htmlToPage += '</p>';
   document.getElementById('quote-box').innerHTML = htmlToPage;
-}
+  body.style.background=randomColor()
+};
 /***
  * click event listener for the print quote button
  * DO NOT CHANGE THE CODE BELOW!!
