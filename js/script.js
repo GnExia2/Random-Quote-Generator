@@ -13,33 +13,33 @@ project 1 - A Random Quote Generator
 var quotes = [
   {
     quote: "One small step for man, one giant leap for mankind!",
-    Author: "Neal Armstrong",
+    source: "Neal Armstrong",
     year: "July 20, 1969",
-    category: "Moon Landing"
+    citation: "Moon Landing"
   },
   {
     quote: "I find your lack of faith disturbing!",
-    Author: "Darth Vader",
+    source: "Darth Vader",
     year: "May 25, 1977",
-    category: "Star Wars: A New Hope"
+    citation: "Star Wars: A New Hope"
   },
   {
     quote: "Fear is the path to the dark side. Fear leads to anger. Anger leads to hate. Hate leads to suffering",
-    Author: "Master Yoda",
+    source: "Master Yoda",
     year: "May 19, 2005",
-    category: "Star Wars: Revenge of the Sith"
+    citation: "Star Wars: Revenge of the Sith"
   },
   {
     quote: "Adventure. Excitement. A Jedi craves not these things.",
-    Author: "Master Yoda",
+    source: "Master Yoda",
     year: "May 21, 1980",
-    category: "Star Wars: Empire Strikes Back"
+    citation: "Star Wars: Empire Strikes Back"
   },
   {
     quote: "Get busy living or get busy dying.",
-    Author: "Stephen King",
+    source: "Stephen King",
     year: "September 22, 1994",
-    category: "The Shawshank Redemption"
+    citation: "The Shawshank Redemption"
   }
 ]
 
@@ -68,14 +68,13 @@ const body = document.getElementById('body')
 function printQuote(){
   randomQuote = getRandomQuote(quotes);
   htmlToPage = '<p class="quote">' + randomQuote.quote +'</p>';
-  htmlToPage +='<p class="Author">' + randomQuote.Author;
+  htmlToPage +='<p class="source">' + randomQuote.source;
   if(randomQuote.year){
     htmlToPage += '<span class="year">' + randomQuote.year + '</span>';
   }
-  if(randomQuote.category){
-    htmlToPage += '<span class="category">' +  " " + randomQuote.category + '</p>';
+  if(randomQuote.citation){
+    htmlToPage += '<span class="citation">' +  " " + randomQuote.citation + '</span>' + '</p>';
   }
-  htmlToPage += '</p>';
   document.getElementById('quote-box').innerHTML = htmlToPage;
   body.style.background=randomColor()
 };
