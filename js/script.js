@@ -73,8 +73,9 @@ function printQuote(){
     htmlToPage += '<span class="year">' + randomQuote.year + '</span>';
   }
   if(randomQuote.citation){
-    htmlToPage += '<span class="citation">' +  " " + randomQuote.citation + '</span>' + '</p>';
+    htmlToPage += '<span class="citation">' +  " " + randomQuote.citation + '</span>';
   }
+  htmlToPage += '</p>'
   document.getElementById('quote-box').innerHTML = htmlToPage;
   body.style.background=randomColor()
 };
